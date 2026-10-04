@@ -1,0 +1,3 @@
+$ paseo agent send dbaef31b-2f26-406b-8d69-ffba3985f377 --no-wait 'I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "paseo-before" and show me its result. Do not call any other tool.'
+AGENT ID                              STATUS        MESSAGE                                 
+dbaef31b-2f26-406b-8d69-ffba3985f377  sent          Message sent, not waiting for completion

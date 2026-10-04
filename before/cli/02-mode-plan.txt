@@ -1,0 +1,31 @@
+$ paseo agent mode dbaef31b-2f26-406b-8d69-ffba3985f377 --list
+MODE               LABEL                      DESCRIPTION                                                       
+plan               Plan Mode                  Analyze the codebase without executing tools or edits             
+default            Always Ask                 Prompts for permission the first time a tool is used              
+acceptEdits        Accept File Edits          Automatically approves edit-focused tools without prompting       
+auto               Auto mode                  Uses a model classifier to review permission prompts automatically
+bypassPermissions  Bypass                     Skip all permission prompts (use with caution)                    
+
+$ paseo agent inspect dbaef31b-2f26-406b-8d69-ffba3985f377   (before selecting Plan)
+Name                before-plan-bypass                                                                                                   
+Provider            claude                                                                                                               
+Model               claude-sonnet-5[1m]                                                                                                  
+Status              idle                                                                                                                 
+Mode                bypassPermissions                                                                                                    
+Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
+Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
+AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
+
+$ paseo agent mode dbaef31b-2f26-406b-8d69-ffba3985f377 plan
+AGENT ID      MODE                
+dbaef31       plan                
+
+$ paseo agent inspect dbaef31b-2f26-406b-8d69-ffba3985f377   (after selecting Plan)
+Name                before-plan-bypass                                                                                                   
+Provider            claude                                                                                                               
+Model               claude-sonnet-5[1m]                                                                                                  
+Status              idle                                                                                                                 
+Mode                plan                                                                                                                 
+Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
+Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
+AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)

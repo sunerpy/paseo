@@ -1,0 +1,13 @@
+$ paseo permit ls
+AGENT         REQ_ID        TOOL                  DESCRIPTION                                       
+dbaef31       permissi      mcp__qa__search_docs  -                                                 
+
+$ paseo agent inspect dbaef31b-2f26-406b-8d69-ffba3985f377
+Model               claude-sonnet-5[1m]                                                                                                  
+Status              running                                                                                                              
+Mode                plan                                                                                                                 
+Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
+AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
+PendingPermissions  permission-37bfb025-bfb3-4ba0-9522-f0c846e6babb (mcp__qa__search_docs)                                               
+
+MCP server executions so far: 0

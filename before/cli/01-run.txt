@@ -1,0 +1,10 @@
+$ paseo run --provider claude --model sonnet --mode bypassPermissions --cwd qa-workspace --json 'Reply with the single word READY.'
+Created workspace wks_21660c9b1bb454b8 - qa-workspace
+Tip: pass --workspace <id> (or set PASEO_WORKSPACE_ID) to run in an existing workspace.
+{
+  "agentId": "dbaef31b-2f26-406b-8d69-ffba3985f377",
+  "status": "completed",
+  "provider": "claude",
+  "cwd": "/config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace",
+  "title": "before-plan-bypass"
+}
