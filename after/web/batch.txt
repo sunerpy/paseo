@@ -1,0 +1,51 @@
+# UI QA at HEAD 0aad7d2a0defb18ff025eb394f9cefb207866485 on 2026-10-04T23:33:07Z
+
+## 1. Existing agent: Plan toggle, mode menu, MCP, Shift+Tab
+background agent before: {"id":"d0050428-a8e2-4ede-ae4f-5f29a49e61a8","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-04T23:31:50.468Z"}
+start: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+saved 01-bypass-plan-off.png
+after Plan toggle: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+saved 02-plan-on-bypass-kept.png
+mode menu options: ["Always ask\nAccept file edits\nAuto mode\nBypass"]
+saved 03-mode-menu-without-plan.png
+permission cards on screen after the MCP call: 0
+saved 04-mcp-ran-without-card.png
+Plan toggled off: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+Shift+Tab #1: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+saved 05-shift-tab-plan-on-bypass-kept.png
+Shift+Tab #2: mode=Select agent mode (Always ask) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+saved 06-shift-tab-leaves-plan.png
+ui-after exit=0
+existing agent after: {"id":"3d58ab92-5a8c-4f00-a06c-50bdaff6c211","title":"head-ui-r2","lastModeId":"default","configModeId":"default","featureValues":{"plan_mode":false},"updatedAt":"2026-10-04T23:33:38.170Z"}
+background agent after: {"id":"d0050428-a8e2-4ede-ae4f-5f29a49e61a8","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-04T23:31:50.468Z"}
+
+## 2. New agent from the draft: Bypass plus Plan, MCP
+draft opened: mode=Select agent mode (Auto mode)
+saved 01-draft-opened.png
+saved 02-draft-mode-menu.png
+draft set: mode=Select agent mode (Bypass)
+saved 03-draft-bypass-plus-plan.png
+permission cards on screen after the MCP call: 0
+created agent: mode=Select agent mode (Bypass)
+saved 04-new-agent-ran-mcp-without-card.png
+ui-after-draft exit=0
+created agent: {"id":"94ff8df0-f1d1-4cd8-b416-8774cc8fcc77","title":"I am planning a docs change. As research for the plan, call","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"thinking":"off","createdAt":"2026-10-04T23:33:53.842Z"}
+
+## 3. Plan approval: Implement with Bypass
+draft set: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
+saved 01-draft-bypass-plus-plan.png
+plan card actions: [{"testId":"permission-request-question","text":"How would you like to proceed?"},{"testId":"permission-request-deny","text":"Reject"},{"testId":"permission-request-accept","text":"Implement"},{"testId":"permission-request-action-implement_resume","text":"Implement with Bypass"}]
+while the plan card shows: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
+saved 02-plan-card-offers-implement-with-bypass.png
+clicked Implement with Bypass
+file created: "implemented in bypass\n"
+permission cards on screen after implementing: 0
+after Implement with Bypass: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
+saved 03-implemented-in-bypass-plan-off.png
+ui-after-plan-approval exit=0
+plan approval agent: {"id":"e2296b58-6bb9-4964-b483-25ccfa8829e3","title":"Plan this change: create a file named plan-approval-check.tx","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":false},"thinking":"off","createdAt":"2026-10-04T23:34:16.427Z"}
+
+MCP log lines for this batch:
+2026-10-04T23:33:27.915Z search_docs head-ui-existing-233307
+2026-10-04T23:33:57.784Z search_docs head-ui-draft-233307
+done 2026-10-04T23:34:39Z
