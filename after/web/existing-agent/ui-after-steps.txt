@@ -1,13 +1,13 @@
-2026-10-05T04:38:01.928Z start: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
-2026-10-05T04:38:01.963Z saved 01-bypass-plan-off.png
-2026-10-05T04:38:03.565Z after Plan toggle: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
-2026-10-05T04:38:03.608Z saved 02-plan-on-bypass-kept.png
-2026-10-05T04:38:04.517Z mode menu options: ["Always ask\nAccept file edits\nAuto mode\nBypass"]
-2026-10-05T04:38:04.563Z saved 03-mode-menu-without-plan.png
-2026-10-05T04:38:14.193Z permission cards on screen after the MCP call: 0
-2026-10-05T04:38:14.239Z saved 04-mcp-ran-without-card.png
-2026-10-05T04:38:15.882Z Plan toggled off: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
-2026-10-05T04:38:17.916Z Shift+Tab #1: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
-2026-10-05T04:38:17.969Z saved 05-shift-tab-plan-on-bypass-kept.png
-2026-10-05T04:38:20.515Z Shift+Tab #2: mode=Select agent mode (Always ask) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
-2026-10-05T04:38:20.568Z saved 06-shift-tab-leaves-plan.png
+2026-10-05T05:05:53.466Z start: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+2026-10-05T05:05:53.509Z saved 01-bypass-plan-off.png
+2026-10-05T05:05:55.115Z after Plan toggle: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+2026-10-05T05:05:55.159Z saved 02-plan-on-bypass-kept.png
+2026-10-05T05:05:56.067Z mode menu options: ["Always ask\nAccept file edits\nAuto mode\nBypass"]
+2026-10-05T05:05:56.114Z saved 03-mode-menu-without-plan.png
+2026-10-05T05:06:06.727Z permission cards on screen after the MCP call: 0
+2026-10-05T05:06:06.774Z saved 04-mcp-ran-without-card.png
+2026-10-05T05:06:08.418Z Plan toggled off: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+2026-10-05T05:06:10.454Z Shift+Tab #1: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+2026-10-05T05:06:10.502Z saved 05-shift-tab-plan-on-bypass-kept.png
+2026-10-05T05:06:13.048Z Shift+Tab #2: mode=Select agent mode (Always ask) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
+2026-10-05T05:06:13.099Z saved 06-shift-tab-leaves-plan.png
