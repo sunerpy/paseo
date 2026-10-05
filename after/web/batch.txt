@@ -1,7 +1,7 @@
-# UI QA at HEAD 0aad7d2a0defb18ff025eb394f9cefb207866485 on 2026-10-04T23:33:07Z
+# UI QA at HEAD 8684d12d6dec153481adfbb1fb23019d0b58987e on 2026-10-05T01:46:14Z
 
 ## 1. Existing agent: Plan toggle, mode menu, MCP, Shift+Tab
-background agent before: {"id":"d0050428-a8e2-4ede-ae4f-5f29a49e61a8","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-04T23:31:50.468Z"}
+background agent before: {"id":"691a63d6-1c96-4ae9-baa0-2edd40c6d0fc","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T01:45:06.164Z"}
 start: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
 saved 01-bypass-plan-off.png
 after Plan toggle: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
@@ -16,8 +16,8 @@ saved 05-shift-tab-plan-on-bypass-kept.png
 Shift+Tab #2: mode=Select agent mode (Always ask) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
 saved 06-shift-tab-leaves-plan.png
 ui-after exit=0
-existing agent after: {"id":"3d58ab92-5a8c-4f00-a06c-50bdaff6c211","title":"head-ui-r2","lastModeId":"default","configModeId":"default","featureValues":{"plan_mode":false},"updatedAt":"2026-10-04T23:33:38.170Z"}
-background agent after: {"id":"d0050428-a8e2-4ede-ae4f-5f29a49e61a8","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-04T23:31:50.468Z"}
+existing agent after: {"id":"4be04d7c-1c81-4e77-b966-486a0181de6f","title":"head-ui-r5","lastModeId":"default","configModeId":"default","featureValues":{"plan_mode":false},"updatedAt":"2026-10-05T01:46:40.283Z"}
+background agent after: {"id":"691a63d6-1c96-4ae9-baa0-2edd40c6d0fc","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T01:45:06.164Z"}
 
 ## 2. New agent from the draft: Bypass plus Plan, MCP
 draft opened: mode=Select agent mode (Auto mode)
@@ -29,7 +29,7 @@ permission cards on screen after the MCP call: 0
 created agent: mode=Select agent mode (Bypass)
 saved 04-new-agent-ran-mcp-without-card.png
 ui-after-draft exit=0
-created agent: {"id":"94ff8df0-f1d1-4cd8-b416-8774cc8fcc77","title":"I am planning a docs change. As research for the plan, call","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"thinking":"off","createdAt":"2026-10-04T23:33:53.842Z"}
+created agent: {"id":"5a6c6915-f645-4323-81cb-a37c873d46e2","title":"I am planning a docs change. As research for the plan, call","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"thinking":"off","createdAt":"2026-10-05T01:46:55.742Z"}
 
 ## 3. Plan approval: Implement with Bypass
 draft set: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
@@ -43,9 +43,9 @@ permission cards on screen after implementing: 0
 after Implement with Bypass: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
 saved 03-implemented-in-bypass-plan-off.png
 ui-after-plan-approval exit=0
-plan approval agent: {"id":"e2296b58-6bb9-4964-b483-25ccfa8829e3","title":"Plan this change: create a file named plan-approval-check.tx","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":false},"thinking":"off","createdAt":"2026-10-04T23:34:16.427Z"}
+plan approval agent: {"id":"e4979012-1c3b-434f-a050-a96d8e1c7743","title":"Plan this change: create a file named plan-approval-check.tx","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":false},"thinking":"off","createdAt":"2026-10-05T01:47:19.298Z"}
 
 MCP log lines for this batch:
-2026-10-04T23:33:27.915Z search_docs head-ui-existing-233307
-2026-10-04T23:33:57.784Z search_docs head-ui-draft-233307
-done 2026-10-04T23:34:39Z
+2026-10-05T01:46:30.251Z search_docs head-ui-existing-014614
+2026-10-05T01:47:00.625Z search_docs head-ui-draft-014614
+done 2026-10-05T01:47:44Z

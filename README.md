@@ -14,7 +14,7 @@ headless Chromium) with a stdio MCP server whose only tool, `search_docs`, has n
 - `web/05-after-deny.png`: the card after answering it.
 - `cli/`: the same reproduction through the CLI (`paseo run`, `agent mode`, `permit ls`, `agent inspect`).
 
-## after/ (this fix; recorded at 0aad7d2a0, production code identical to the PR head)
+## after/ (this fix, recorded at 8684d12d6: the PR branch with main 36e6ccd6c merged in)
 
 - `web/existing-agent/recording.webm`: Bypass agent, Plan toggle on (Bypass stays selected), the mode
   menu without a Plan entry, an MCP call without a card, then Shift+Tab (Plan on keeping Bypass, then
