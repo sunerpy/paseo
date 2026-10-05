@@ -1,18 +1,18 @@
-# CLI QA at HEAD 8684d12d6dec153481adfbb1fb23019d0b58987e on 2026-10-05T01:44:35Z
+# CLI QA at HEAD 08ad9d109ba9326ee2f6b0e42ab63bd6af422bf7 on 2026-10-05T02:21:36Z
 
 ## A. Bypass agent, then Plan
 $ paseo run --provider claude --model sonnet --mode bypassPermissions --title head-bypass-plan --workspace wks_21660c9b1bb454b8 --cwd /config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace --json 'Reply with the single word READY.'
 {
-  "agentId": "691a63d6-1c96-4ae9-baa0-2edd40c6d0fc",
+  "agentId": "35e03fde-0e43-40e6-b3eb-1bb358866792",
   "status": "completed",
   "provider": "claude",
   "cwd": "/config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace",
   "title": "head-bypass-plan"
 }
 
-$ paseo agent inspect 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc
+$ paseo agent inspect 35e03fde-0e43-40e6-b3eb-1bb358866792
 KEY                 VALUE                                                                                                                
-Id                  691a63d6-1c96-4ae9-baa0-2edd40c6d0fc                                                                                 
+Id                  35e03fde-0e43-40e6-b3eb-1bb358866792                                                                                 
 Name                head-bypass-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               claude-sonnet-5[1m]                                                                                                  
@@ -22,8 +22,8 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                bypassPermissions                                                                                                    
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:44:36.623Z                                                                                             
-UpdatedAt           2026-10-05T01:44:40.141Z                                                                                             
+CreatedAt           2026-10-05T02:21:37.608Z                                                                                             
+UpdatedAt           2026-10-05T02:21:43.133Z                                                                                             
 LastUsage           InputTokens: 61538, OutputTokens: 1, CachedTokens: 0, CostUsd: $0.12                                                 
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
@@ -31,13 +31,13 @@ PendingPermissions  []
 Worktree            null                                                                                                                 
 ParentAgentId       null                                                                                                                 
 
-$ paseo agent mode 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc plan
+$ paseo agent mode 35e03fde-0e43-40e6-b3eb-1bb358866792 plan
 AGENT ID      MODE                
-691a63d       plan                
+35e03fd       plan                
 
-$ paseo agent inspect 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc
+$ paseo agent inspect 35e03fde-0e43-40e6-b3eb-1bb358866792
 KEY                 VALUE                                                                                                                
-Id                  691a63d6-1c96-4ae9-baa0-2edd40c6d0fc                                                                                 
+Id                  35e03fde-0e43-40e6-b3eb-1bb358866792                                                                                 
 Name                head-bypass-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               claude-sonnet-5[1m]                                                                                                  
@@ -47,8 +47,8 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                bypassPermissions                                                                                                    
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:44:36.623Z                                                                                             
-UpdatedAt           2026-10-05T01:44:42.703Z                                                                                             
+CreatedAt           2026-10-05T02:21:37.608Z                                                                                             
+UpdatedAt           2026-10-05T02:21:45.683Z                                                                                             
 LastUsage           InputTokens: 61538, OutputTokens: 1, CachedTokens: 0, CostUsd: $0.12                                                 
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
@@ -57,15 +57,15 @@ Worktree            null
 ParentAgentId       null                                                                                                                 
 record: {"lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"features":[{"id":"plan_mode","value":true}]}
 
-$ paseo agent send 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-014435" and show me its result. Do not call any other tool.
+$ paseo agent send 35e03fde-0e43-40e6-b3eb-1bb358866792 I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-022136" and show me its result. Do not call any other tool.
 AGENT ID                              STATUS        MESSAGE                                 
-691a63d6-1c96-4ae9-baa0-2edd40c6d0fc  completed     Agent completed processing the message  
+35e03fde-0e43-40e6-b3eb-1bb358866792  completed     Agent completed processing the message  
 
 $ paseo permit ls
 
-$ paseo agent inspect 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc
+$ paseo agent inspect 35e03fde-0e43-40e6-b3eb-1bb358866792
 KEY                 VALUE                                                                                                                
-Id                  691a63d6-1c96-4ae9-baa0-2edd40c6d0fc                                                                                 
+Id                  35e03fde-0e43-40e6-b3eb-1bb358866792                                                                                 
 Name                head-bypass-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               claude-sonnet-5[1m]                                                                                                  
@@ -75,24 +75,24 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                bypassPermissions                                                                                                    
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:44:36.623Z                                                                                             
-UpdatedAt           2026-10-05T01:44:52.437Z                                                                                             
-LastUsage           InputTokens: 126750, OutputTokens: 78, CachedTokens: 0, CostUsd: $0.38                                               
+CreatedAt           2026-10-05T02:21:37.608Z                                                                                             
+UpdatedAt           2026-10-05T02:21:56.118Z                                                                                             
+LastUsage           InputTokens: 126742, OutputTokens: 74, CachedTokens: 0, CostUsd: $0.38                                               
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
 PendingPermissions  []                                                                                                                   
 Worktree            null                                                                                                                 
 ParentAgentId       null                                                                                                                 
-MCP executions for head-cli-014435: 1
+MCP executions for head-cli-022136: 1
 record: {"lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"features":[{"id":"plan_mode","value":true}]}
 
-$ paseo agent reload 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc
+$ paseo agent reload 35e03fde-0e43-40e6-b3eb-1bb358866792
 AGENT ID                              STATUS    TIMELINE
-691a63d6-1c96-4ae9-baa0-2edd40c6d0fc  reloaded  5       
+35e03fde-0e43-40e6-b3eb-1bb358866792  reloaded  5       
 
-$ paseo agent inspect 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc
+$ paseo agent inspect 35e03fde-0e43-40e6-b3eb-1bb358866792
 KEY                 VALUE                                                                                                                
-Id                  691a63d6-1c96-4ae9-baa0-2edd40c6d0fc                                                                                 
+Id                  35e03fde-0e43-40e6-b3eb-1bb358866792                                                                                 
 Name                head-bypass-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               sonnet                                                                                                               
@@ -102,36 +102,36 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                bypassPermissions                                                                                                    
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:44:36.623Z                                                                                             
-UpdatedAt           2026-10-05T01:44:52.437Z                                                                                             
-LastUsage           InputTokens: 126750, OutputTokens: 78, CachedTokens: 0, CostUsd: $0.38                                               
+CreatedAt           2026-10-05T02:21:37.608Z                                                                                             
+UpdatedAt           2026-10-05T02:21:56.118Z                                                                                             
+LastUsage           InputTokens: 126742, OutputTokens: 74, CachedTokens: 0, CostUsd: $0.38                                               
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
 PendingPermissions  []                                                                                                                   
 Worktree            null                                                                                                                 
 ParentAgentId       null                                                                                                                 
 
-$ paseo agent send 691a63d6-1c96-4ae9-baa0-2edd40c6d0fc I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-reload-014435" and show me its result. Do not call any other tool.
+$ paseo agent send 35e03fde-0e43-40e6-b3eb-1bb358866792 I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-reload-022136" and show me its result. Do not call any other tool.
 AGENT ID                              STATUS        MESSAGE                                 
-691a63d6-1c96-4ae9-baa0-2edd40c6d0fc  completed     Agent completed processing the message  
+35e03fde-0e43-40e6-b3eb-1bb358866792  completed     Agent completed processing the message  
 
 $ paseo permit ls
-MCP executions for head-cli-reload-014435: 1
+MCP executions for head-cli-reload-022136: 1
 record after reload: {"lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"features":[{"id":"plan_mode","value":true}]}
 
 ## B. Legacy create with --mode plan (Claude default access mode plus Plan)
 $ paseo run --provider claude --model sonnet --mode plan --title head-legacy-plan --workspace wks_21660c9b1bb454b8 --cwd /config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace --json 'Reply with the single word READY.'
 {
-  "agentId": "619f3f5b-e558-4c87-9b10-504ca711a060",
+  "agentId": "ec31e66a-6753-4eb6-9c53-a6177c5a5a63",
   "status": "completed",
   "provider": "claude",
   "cwd": "/config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace",
   "title": "head-legacy-plan"
 }
 
-$ paseo agent inspect 619f3f5b-e558-4c87-9b10-504ca711a060
+$ paseo agent inspect ec31e66a-6753-4eb6-9c53-a6177c5a5a63
 KEY                 VALUE                                                                                                                
-Id                  619f3f5b-e558-4c87-9b10-504ca711a060                                                                                 
+Id                  ec31e66a-6753-4eb6-9c53-a6177c5a5a63                                                                                 
 Name                head-legacy-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               claude-sonnet-5[1m]                                                                                                  
@@ -141,8 +141,8 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                auto                                                                                                                 
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:45:08.747Z                                                                                             
-UpdatedAt           2026-10-05T01:45:12.712Z                                                                                             
+CreatedAt           2026-10-05T02:22:13.329Z                                                                                             
+UpdatedAt           2026-10-05T02:22:17.154Z                                                                                             
 LastUsage           InputTokens: 63171, OutputTokens: 1, CachedTokens: 0, CostUsd: $0.13                                                 
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
@@ -151,35 +151,37 @@ Worktree            null
 ParentAgentId       null                                                                                                                 
 record: {"lastModeId":"auto","configModeId":"auto","featureValues":{"plan_mode":true},"features":[{"id":"plan_mode","value":true}]}
 
-$ paseo agent send 619f3f5b-e558-4c87-9b10-504ca711a060 --no-wait I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-default-014435" and show me its result. Do not call any other tool.
+$ paseo agent send ec31e66a-6753-4eb6-9c53-a6177c5a5a63 --no-wait I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-default-022136" and show me its result. Do not call any other tool.
 AGENT ID                              STATUS        MESSAGE                                 
-619f3f5b-e558-4c87-9b10-504ca711a060  sent          Message sent, not waiting for completion
+ec31e66a-6753-4eb6-9c53-a6177c5a5a63  sent          Message sent, not waiting for completion
 
 (waiting up to 180s for the permission request)
 
 $ paseo permit ls
 AGENT         REQ_ID        TOOL                  DESCRIPTION                                       
-619f3f5       permissi      mcp__qa__search_docs  -                                                 
-pending request for B: permission-1ac3ffb1-d5e4-438e-8581-0bcb8b2df92d
-MCP executions for head-cli-default-014435 before answering: 0
+ec31e66       permissi      mcp__qa__search_docs  -                                                 
+pending request for B: permission-a194ce64-bcd9-448e-b96d-a87ab9ffb1a0
+MCP executions for head-cli-default-022136 before answering: 0
 
-$ paseo permit deny 619f3f5b-e558-4c87-9b10-504ca711a060 permission-1ac3ffb1-d5e4-438e-8581-0bcb8b2df92d
+$ paseo permit deny ec31e66a-6753-4eb6-9c53-a6177c5a5a63 permission-a194ce64-bcd9-448e-b96d-a87ab9ffb1a0
 REQUEST ID    AGENT       TOOL                  RESULT    
-permissi      619f3f5     mcp__qa__search_docs  denied    
+permissi      ec31e66     mcp__qa__search_docs  denied    
 
-$ paseo agent wait 619f3f5b-e558-4c87-9b10-504ca711a060
-AGENT ID                              STATUS        MESSAGE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-619f3f5b-e558-4c87-9b10-504ca711a060  idle          Agent is idle.
+$ paseo agent wait ec31e66a-6753-4eb6-9c53-a6177c5a5a63
+AGENT ID                              STATUS        MESSAGE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ec31e66a-6753-4eb6-9c53-a6177c5a5a63  idle          Agent is idle.
 Last 5 activity items:
 [User] Reply with the single word READY.
 READY
-[User] I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-default-014435" and show me its result. Do not call any other tool.
-[mcp__qa__search_docs] {"query":"head-cli-default-014435"}
-The tool call was denied, so I don't have a result to show. Want to grant permission and retry, or should I continue the plan without it?
+[User] I am planning a docs change. As research for the plan, call the read-only mcp__qa__search_docs tool exactly once with query "head-cli-default-022136" and show me its result. Do not call any other tool.
+[mcp__qa__search_docs] {"query":"head-cli-default-022136"}
+The tool call was denied, so I don't have a result to show. We're still in plan mode and I haven't made any edits or taken other actions.
 
-$ paseo agent inspect 619f3f5b-e558-4c87-9b10-504ca711a060
+Want me to try again, or would you rather exit plan mode first so the permission can be granted?
+
+$ paseo agent inspect ec31e66a-6753-4eb6-9c53-a6177c5a5a63
 KEY                 VALUE                                                                                                                
-Id                  619f3f5b-e558-4c87-9b10-504ca711a060                                                                                 
+Id                  ec31e66a-6753-4eb6-9c53-a6177c5a5a63                                                                                 
 Name                head-legacy-plan                                                                                                     
 Provider            claude                                                                                                               
 Model               claude-sonnet-5[1m]                                                                                                  
@@ -189,15 +191,15 @@ Archived            false
 ArchivedAt          null                                                                                                                 
 Mode                auto                                                                                                                 
 Cwd                 ~/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/qa-workspace                                                
-CreatedAt           2026-10-05T01:45:08.747Z                                                                                             
-UpdatedAt           2026-10-05T01:45:26.335Z                                                                                             
-LastUsage           InputTokens: 126728, OutputTokens: 49, CachedTokens: 0, CostUsd: $0.38                                               
+CreatedAt           2026-10-05T02:22:13.329Z                                                                                             
+UpdatedAt           2026-10-05T02:22:31.433Z                                                                                             
+LastUsage           InputTokens: 126738, OutputTokens: 70, CachedTokens: 0, CostUsd: $0.38                                               
 Capabilities        Streaming: true, Persistence: true, DynamicModes: true, McpServers: true                                             
 AvailableModes      plan (Plan Mode), default (Always Ask), acceptEdits (Accept File Edits), auto (Auto mode), bypassPermissions (Bypass)
 PendingPermissions  []                                                                                                                   
 Worktree            null                                                                                                                 
 ParentAgentId       null                                                                                                                 
-MCP executions for head-cli-default-014435 after denying: 0
+MCP executions for head-cli-default-022136 after denying: 0
 record: {"lastModeId":"auto","configModeId":"auto","featureValues":{"plan_mode":true},"features":[{"id":"plan_mode","value":true}]}
 
-done 2026-10-05T01:45:27Z
+done 2026-10-05T02:22:32Z
