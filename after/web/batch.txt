@@ -1,7 +1,7 @@
-# UI QA at HEAD 0ee8bdbaf04bb3a7fe5548deb4f8bcb4fbdd0360 on 2026-10-05T03:57:39Z
+# UI QA at HEAD a72407c87d59a4b7bfa7890077112d5402470061 on 2026-10-05T04:37:53Z
 
 ## 1. Existing agent: Plan toggle, mode menu, MCP, Shift+Tab
-background agent before: {"id":"f73976c3-dc7d-4958-990a-ca1d3558fc6c","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T03:53:43.399Z"}
+background agent before: {"id":"bc411bd0-6a1e-449c-a62f-ad44f8d80b82","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T04:35:47.155Z"}
 start: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
 saved 01-bypass-plan-off.png
 after Plan toggle: mode=Select agent mode (Bypass) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
@@ -16,8 +16,8 @@ saved 05-shift-tab-plan-on-bypass-kept.png
 Shift+Tab #2: mode=Select agent mode (Always ask) plan={"ariaPressed":null,"ariaChecked":null,"ariaLabel":"Toggle plan mode"}
 saved 06-shift-tab-leaves-plan.png
 ui-after exit=0
-existing agent after: {"id":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","title":"head-ui-r8","lastModeId":"default","configModeId":"default","featureValues":{"plan_mode":false},"updatedAt":"2026-10-05T03:58:05.768Z"}
-background agent after: {"id":"f73976c3-dc7d-4958-990a-ca1d3558fc6c","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T03:53:43.399Z"}
+existing agent after: {"id":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","title":"head-ui-r9","lastModeId":"default","configModeId":"default","featureValues":{"plan_mode":false},"updatedAt":"2026-10-05T04:38:18.022Z"}
+background agent after: {"id":"bc411bd0-6a1e-449c-a62f-ad44f8d80b82","title":"head-bypass-plan","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"updatedAt":"2026-10-05T04:35:47.155Z"}
 
 ## 2. New agent from the draft: Bypass plus Plan, MCP
 draft opened: mode=Select agent mode (Auto mode)
@@ -29,7 +29,7 @@ permission cards on screen after the MCP call: 0
 created agent: mode=Select agent mode (Bypass)
 saved 04-new-agent-ran-mcp-without-card.png
 ui-after-draft exit=0
-created agent: {"id":"70936f18-8b6c-4910-98f2-3e0f62b7d6b2","title":"I am planning a docs change. As research for the plan, call","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"thinking":"off","createdAt":"2026-10-05T03:58:21.114Z"}
+created agent: {"id":"799ae929-5dc1-49c6-9b42-119ef41b8d98","title":"I am planning a docs change. As research for the plan, call","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":true},"thinking":"off","createdAt":"2026-10-05T04:38:33.447Z"}
 
 ## 3. Plan approval: Implement with Bypass
 draft set: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
@@ -39,13 +39,24 @@ while the plan card shows: {"mode":"Select agent mode (Bypass)","planPressed":nu
 saved 02-plan-card-offers-implement-with-bypass.png
 clicked Implement with Bypass
 file created: "implemented in bypass\n"
-permission cards on screen after implementing: 0
-after Implement with Bypass: {"mode":"Select agent mode (Bypass)","planPressed":null,"planChecked":null}
-saved 03-implemented-in-bypass-plan-off.png
-ui-after-plan-approval exit=0
-plan approval agent: {"id":"8e878cd1-21b6-4884-98bb-a0601281f313","title":"Plan this change: create a file named plan-approval-check.tx","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":false},"thinking":"off","createdAt":"2026-10-05T03:58:44.027Z"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 240000ms exceeded.
+Call log:
+[2m  - waiting for getByText(/Worked for/).last() to be visible[22m
+[2m    478 × locator resolved to hidden <div dir="auto" class="css-text-146c3p1 unistyles_lam9tzbr9f ">Worked for 8s</div>[22m
+
+    at /config/workspace/ProdDir/AI/paseo-evidence/claude-plan-bypass/repro/ui-after-plan-approval.mjs:89:45 {
+  name: 'TimeoutError'
+}
+
+Node.js v26.5.0
+ui-after-plan-approval exit=1
+plan approval agent: {"id":"b42b6e39-e056-4d6c-976b-a1bbe35b9e44","title":"Plan this change: create a file named plan-approval-check.tx","lastModeId":"bypassPermissions","configModeId":"bypassPermissions","featureValues":{"plan_mode":false},"thinking":"off","createdAt":"2026-10-05T04:38:55.966Z"}
 
 MCP log lines for this batch:
-2026-10-05T03:57:55.969Z search_docs head-ui-existing-035739
-2026-10-05T03:58:25.134Z search_docs head-ui-draft-035739
-done 2026-10-05T03:59:07Z
+2026-10-05T04:38:08.549Z search_docs head-ui-existing-043753
+2026-10-05T04:38:37.187Z search_docs head-ui-draft-043753
+done 2026-10-05T04:44:08Z

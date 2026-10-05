@@ -1,13 +1,13 @@
-# set_agent_mode/feature requests in qa-daemon-head-r8.log (QA daemon at HEAD 0ee8bdbaf)
-11:53:18.795 session: set_agent_mode_request {"agentId":"f73976c3-dc7d-4958-990a-ca1d3558fc6c","modeId":"plan","origin":"cli"}
-11:53:18.798 session: set_agent_mode_request success {"agentId":"f73976c3-dc7d-4958-990a-ca1d3558fc6c","modeId":"plan","origin":"cli"}
-11:57:49.279 session: set_agent_feature_request {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":true,"origin":"app"}
-11:57:49.281 session: set_agent_feature_request success {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":true,"origin":"app"}
-11:58:02.044 session: set_agent_feature_request {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":false,"origin":"app"}
-11:58:02.047 session: set_agent_feature_request success {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":false,"origin":"app"}
-11:58:03.657 session: set_agent_feature_request {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":true,"origin":"app"}
-11:58:03.659 session: set_agent_feature_request success {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":true,"origin":"app"}
-11:58:05.754 session: set_agent_mode_request {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","modeId":"default","origin":"app"}
-11:58:05.755 session: set_agent_mode_request success {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","modeId":"default","origin":"app"}
-11:58:05.766 session: set_agent_feature_request {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":false,"origin":"app"}
-11:58:05.768 session: set_agent_feature_request success {"agentId":"cf6b83cd-edf2-4160-aa8c-07b5df545a4b","featureId":"plan_mode","value":false,"origin":"app"}
+# set_agent_mode/feature requests in qa-daemon-head-r9.log (QA daemon at HEAD a72407c87)
+12:35:21.752 session: set_agent_mode_request {"agentId":"bc411bd0-6a1e-449c-a62f-ad44f8d80b82","modeId":"plan","origin":"cli"}
+12:35:21.755 session: set_agent_mode_request success {"agentId":"bc411bd0-6a1e-449c-a62f-ad44f8d80b82","modeId":"plan","origin":"cli"}
+12:38:02.019 session: set_agent_feature_request {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":true,"origin":"app"}
+12:38:02.022 session: set_agent_feature_request success {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":true,"origin":"app"}
+12:38:14.296 session: set_agent_feature_request {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":false,"origin":"app"}
+12:38:14.300 session: set_agent_feature_request success {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":false,"origin":"app"}
+12:38:15.910 session: set_agent_feature_request {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":true,"origin":"app"}
+12:38:15.911 session: set_agent_feature_request success {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":true,"origin":"app"}
+12:38:18.007 session: set_agent_mode_request {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","modeId":"default","origin":"app"}
+12:38:18.008 session: set_agent_mode_request success {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","modeId":"default","origin":"app"}
+12:38:18.020 session: set_agent_feature_request {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":false,"origin":"app"}
+12:38:18.022 session: set_agent_feature_request success {"agentId":"bcebc3cc-e0df-43d3-bd47-6bd17d3e0bfd","featureId":"plan_mode","value":false,"origin":"app"}
